@@ -3,7 +3,10 @@
 
 <head>
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap" rel="stylesheet"> 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
 
   <style>
     html, body {
@@ -38,7 +41,7 @@
       --yellow-accent:#bd9a0c;
     }
 
-    a {
+    button {
       top: 0;
       left: 0;
       background: none;
@@ -48,35 +51,39 @@
       font: inherit;
       cursor: pointer;
       outline: inherit;
-      text-decoration: none;
     }
 
-        i {
+    i {
       padding-right: 4px;
       font-size: 24px;
       vertical-align: middle;
     }
 
-    .btn {
+    .btn-white {
       text-align: center;
+      color: #ffffff;
       font-family: 'Manrope';
       display: inline-block;
       margin: 0px;
       font-weight: bold;
     }
-
-    .btn span {
+    .btn-black {
+      text-align: center;
+      color: #000000;
+      font-family: 'Manrope';
+      display: inline-block;
+      margin: 0px;
+      font-weight: bold;
+      .btn span {
       padding-top: 10px;
       top: 10px;
       line-height: 1.5;
     }
-
-    .btn-white {
-      color: #ffffff; /* Белый цвет текста */
-    }
-
-    .btn-black {
-      color: #000000; /* Черный цвет текста */
+  }
+      .btn span {
+      padding-top: 10px;
+      top: 10px;
+      line-height: 1.5;
     }
 
     .my-color {
@@ -272,12 +279,21 @@
 
 <body>
 
-  <a href="https://www.behance.net/AdrianGlad" class="btn btn-white mid blue rounded" type="button" > <i class="fa-brands fa-square-behance" style="color: #ffffff;"> </i> <span>Портфолио</span>
+  <button class="btn btn-white mid blue rounded" type="button" onclick="navigateBehance()"> <i class="fa-brands fa-square-behance" style="color: #ffffff;"></i> </i> <span>Портфолио</span>
 </button>
 
-  <a href="https://t.me/adriangladsh" class="btn btn-black mid my-color rounded" type="button"> <i class="fa-brands fa-telegram" style="color: #20a0e1;"> </i> <span>@adriangladsh</span>
-</a>
- 
+  <button class="btn btn-black mid my-color rounded" type="button" onclick="navigateTelegram()"> <i class="fa-brands fa-telegram" style="color: #20a0e1;"></i> <span>@adriangladsh</span>
+</button>
+  
+  <script>
+    function navigateBehance() {
+      window.open("https://www.behance.net/AdrianGlad", '_blank').focus();
+    }
+
+    function navigateTelegram() {
+      window.open("https://t.me/adriangladsh", '_blank').focus();
+    }
+  </script>
 
 </body>
 
